@@ -121,6 +121,10 @@ extra:
     # libgomp is a linked library with no CBC pin var (gnu OpenMP runtime);
     # same approach as magma-feedstock.
     - host_section_needs_exact_pinnings
+    # The runtime output name is jinja-computed (libnvpl-blas{{ somajor }}); the
+    # 1-to-1 check compares anaconda.yaml against the raw (unrendered) names and
+    # can't match the literal libnvpl-blas0. anaconda.yaml lists both outputs.
+    - missing_source_tracking
   feedstock-name: libnvpl-blas
   recipe-maintainers:
     - conda-forge/cuda

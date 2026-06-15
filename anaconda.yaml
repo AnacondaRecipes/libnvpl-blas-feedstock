@@ -5,3 +5,4 @@ upstream_sources:
       regex: '"version":\s*"([^"]+)"'
     packages:
       - libnvpl-blas-dev
+      - libnvpl-blas0
